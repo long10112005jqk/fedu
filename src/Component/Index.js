@@ -2,9 +2,12 @@ import React from 'react';
 import axios from 'axios';
 // import * as api from '../api/index.js';
 import {Link} from "react-router-dom";
-const getDataDesign = () => axios.get('/getDataDesign').then((res) => res.data);
-const getDataFontEnd = () => axios.get('/getDataFontend').then((res) => res.data);
-const getDataBackEnd = () => axios.get('/AllBackEnd').then((res) => res.data);
+const cors = require('cors');
+
+const URL = 'https://projectfedu.herokuapp.com';
+const getDataDesign = () => axios.get('https://projectfedu.herokuapp.com/getDataDesign').then((res) => res.data);
+const getDataFontEnd = () => axios.get('https://projectfedu.herokuapp.com/getDataFontend').then((res) => res.data);
+const getDataBackEnd = () => axios.get('https://projectfedu.herokuapp.com/AllBackEnd').then((res) => res.data);
 class Index extends React.Component {
 	 constructor(props) {
 	    super(props);
